@@ -14,25 +14,21 @@
         // Display all of Mike's information
         Console.WriteLine(person3.ToString());
 
-        // Change Ian's favorite color to white, and display his information
-        person1.ChangeFavoriteColour();
+        person1.ChangeFavoriteColour(); // Change Ian's favorite color & display his information
         Console.WriteLine($"{person1.PersonId}: {person1.FirstName} {person1.LastName}'s favorite colour is: {person1.FavoriteColour}");
 
-        // Display Mary's age in 10 years
-        Console.WriteLine($"{person4.FirstName} {person4.LastName}'s Age in 10 years is: {person4.GetAgeInTenYears()}");
+        Console.WriteLine($"{person4.FirstName} {person4.LastName}'s Age in 10 years is: {person4.GetAgeInTenYears()}"); // Display Mary's age in 10 years
 
-        // Create Relation objects for Sisterhood and Brotherhood
-        Relation relation1 = new Relation("Sisterhood");
+        Relation relation1 = new Relation("Sisterhood");    // Relation objects 
         relation1.ShowRelationShip(person2, person4);
 
         Relation relation2 = new Relation("Brotherhood");
         relation2.ShowRelationShip(person1, person3);
 
-        // Add all Person objects to a list
-        List<Person> peopleList = new List<Person> { person1, person2, person3, person4 };
+        List<Person> peopleList = new List<Person> { person1, person2, person3, person4 };  // Add all Person objects to a list
 
         // Display average age
-        double averageAge = peopleList.Average(p => p.Age);
+        double averageAge = peopleList.Average(p => p.Age); 
         Console.WriteLine($"Average age is: {averageAge}");
 
         // Find the youngest and oldest person
